@@ -21,7 +21,7 @@ function App() {
       <div className="firstPage py-5">
         <div className="row ms-5 d-flex align-items-center justify-content-center">
           <div className="col-1"></div>
-          <div className="intro col-3 ms-5 ">
+          <div className="intro col-lg-3 ms-5 col-sm-12 ">
             <h4>
               Akarsh <span className="color">Nair</span>
             </h4>
@@ -44,7 +44,7 @@ function App() {
             />{" "}
           </div>
           <div className="col-1"></div>
-          <div className="col-4 rounded">
+          <div className="col-lg-4 col-sm-12 rounded">
             <img
               style={{ borderRadius: "50%" }}
               src="/pic.jpg"
@@ -60,7 +60,7 @@ function App() {
       <div className="aboutMe mt-5 py-5">
         <div className="row d-flex align-items-center justify-content-center">
           <div className="col-1"></div>
-          <div className="col-4">
+          <div className="col-lg-4 col-sm-12">
             <img
               src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnpoNHB3Mzd6d3VvN282dXdhOTM5b2UwZjI1NG4zbTFiNjZmZGNzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bGgsc5mWoryfgKBx1u/giphy.gif"
               alt=""
@@ -70,7 +70,7 @@ function App() {
           </div>
           <div className="col-1"></div>
 
-          <div className="col-5">
+          <div className="col-lg-5 col-sm-12">
             <h3 className="text-center about">About Me</h3>
             <p className="about_text mt-3">
               I'm Akarsh Nair, a dedicated full-stack developer passionate about
@@ -92,7 +92,7 @@ function App() {
           <div className="col-10">
             <h1 className="text-center project">My Projects</h1>
             <div className="row">
-              <div className="col-4 mt-5">
+              <div className="col-lg-4 col-sm-12 mt-5">
                 <Card className="card" style={{ width: "18rem" }}>
                   <Card.Img
                     variant="top"
@@ -120,7 +120,7 @@ function App() {
                   </Card.Body>
                 </Card>
               </div>
-              <div className="col-4 mt-5">
+              <div className="col-lg-4 col-sm-12  mt-5">
                 <Card className="card" style={{ width: "18rem" }}>
                   <Card.Img
                     variant="top"
@@ -150,7 +150,7 @@ function App() {
                   </Card.Body>
                 </Card>
               </div>
-              <div className="col-4 mt-5">
+              <div className="col-lg-4 col-sm-12  mt-5">
                 <Card className="card" style={{ width: "18rem" }}>
                   <Card.Img
                     variant="top"
@@ -187,42 +187,42 @@ function App() {
       <div className="skills pt-5 pb-5">
         <h1 className="text-center skill pb-3">My skills</h1>
         <div className="row mx-5 icon-container">
-          <div className="col-2 pt-5">
+          <div className="col-lg-2 col-6 pt-5">
             <FontAwesomeIcon
               className="fa-4x html"
               icon={faHtml5}
               style={{ color: "#f5740a" }}
-            />{" "}
+            />
           </div>
-          <div className="col-2 pt-5">
+          <div className="col-lg-2 col-6 pt-5">
             <FontAwesomeIcon
               className="fa-4x css"
               icon={faCss3Alt}
               style={{ color: "#1790ee" }}
-            />{" "}
+            />
           </div>
-          <div className="col-2 pt-5">
+          <div className="col-lg-2 col-6 pt-5">
             <FontAwesomeIcon
               className="fa-4x js"
               icon={faJs}
               style={{ color: "#FFD43B" }}
-            />{" "}
+            />
           </div>
-          <div className="col-2 pt-5">
+          <div className="col-lg-2 col-6 pt-5">
             <FontAwesomeIcon
               className="fa-4x react"
               icon={faReact}
               style={{ color: "#74C0FC" }}
-            />{" "}
+            />
           </div>
-          <div className="col-2 pt-5">
+          <div className="col-lg-2 col-6 pt-5">
             <FontAwesomeIcon
               className="fa-4x angular"
               icon={faAngular}
               style={{ color: "#e13333" }}
-            />{" "}
+            />
           </div>
-          <div className="col-2 pt-5">
+          <div className="col-lg-2 col-6 pt-5">
             <FontAwesomeIcon
               className="fa-4x node"
               icon={faNode}
@@ -234,11 +234,13 @@ function App() {
       <div className="contactForm mt-1 py-4">
         <div className="row">
           <h2 className="mt-5 text-center">Contact Form</h2>
-          <div className="col-2"></div>
-          <div className="col-4 me-4 mt-4">
+          <div className="col-lg-2 col-sm-12"></div>
+          <div className="col-lg-4 col-sm-12 me-4 mt-4">
             <img
               src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXF6azd4MmNqbHcyd210aGVtanRyOWNyaTdtcmo0YmRiczhheGEzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nv6bOexvEyVV50U4Qz/giphy.gif"
               alt=""
+              height={450}
+              width={450}
             />
           </div>
           <div className="col-4 mt-4 bg-secondary rounded-2 form">
