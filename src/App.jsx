@@ -13,8 +13,23 @@ import {
   faNode,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const subject = encodeURIComponent("Message from your website"); // Subject line for the email
+    const body = encodeURIComponent(message); // Body of the email
+
+    // Construct the mailto link
+    const mailtoLink = `mailto:akarshnair007@gmail.com?subject=${subject}&body=${body}`;
+
+    // Redirect the user to their email client with the mailto link
+    window.location.href = mailtoLink;
+  };
   return (
     <>
       {" "}
@@ -244,13 +259,16 @@ function App() {
             />
           </div>
           <div className="col-4 mt-4 bg-secondary rounded-2 form">
-            <Form className="mt-4">
+            <Form className="mt-4" onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label className="form-label">Email address</Form.Label>
                 <Form.Control
                   className="w-100 form-input"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email"
+                  required
                 />
               </Form.Group>
 
@@ -258,12 +276,15 @@ function App() {
                 <Form.Label className="form-label">Message</Form.Label>
                 <Form.Control
                   className="w-100 form-input"
-                  type="text"
+                  as="textarea"
+                  rows={3}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Enter your message"
+                  required
                 />
               </Form.Group>
               <div className="d-flex align-items-center justify-content-center mt-5">
-                {" "}
                 <Button
                   className="d-flex text-align-center justify-content-center"
                   variant="dark"
