@@ -1,14 +1,10 @@
-body {
-  overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: clip; /* Change to overflow-x: hidden; */
 }
-.intro h4 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
-  font-weight: 800;
-  -webkit-animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
-  animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
+
 .text-animation {
   font-family: "PT Serif", serif;
   font-weight: 700;
@@ -102,11 +98,24 @@ body {
   color: white;
 }
 
-.project {
-  font-family: "PT Serif", serif;
-  font-size: 38px;
-  font-weight: bolder;
-  color: white;
+.projects {
+  transition: filter 0.3s ease;
+}
+
+.projects.blurred {
+  filter: blur(8px);
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
 }
 .about {
   font-family: "EB Garamond", serif;
@@ -114,9 +123,7 @@ body {
   font-weight: 800;
   color: rgb(241, 241, 241);
 }
-.about:hover {
-  animation: myAnim 0.9s ease 0s 1 normal forwards;
-}
+
 .gify {
   box-shadow: 2px 3px 34px 0px rgba(0, 0, 0, 0.75);
   -webkit-animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
@@ -124,108 +131,60 @@ body {
   animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .card {
-  box-shadow: 2px 3px 34px 0px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 2px 3px 34px 0px rgba(0, 0, 0, 0.75); */
+  /* overflow-y: hidden; */
 }
-@keyframes myAnim {
-  0% {
-    transform: scale(0.5);
-    transform-origin: 50% 0%;
-  }
 
-  100% {
-    transform: scale(1);
-    transform-origin: 50% 0%;
-  }
-}
-.card:hover {
-  animation: scaleCard 2s ease 0s 1 normal forwards;
-}
-@keyframes scaleCard {
-  0% {
-    transform: scale(0.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 .form {
   box-shadow: 2px 3px 34px 0px rgba(0, 0, 0, 0.75);
 }
-@keyframes myAnim {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
 
-  10%,
-  30%,
-  50%,
-  70% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60% {
-    transform: translateX(10px);
-  }
-
-  80% {
-    transform: translateX(8px);
-  }
-
-  90% {
-    transform: translateX(-8px);
-  }
-}
 .about_text {
   font-family: "EB Garamond", serif;
-  font-size: 20px;
+  font-size: 1rem;
   color: white;
+  max-width: 70%; /* Example: Limit line width to 70% of container */
+  margin: 0 auto; /* Center the text horizontally */
 }
-.cardTitle {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 500;
-}
-.cardText {
-  font-family: "EB Garamond", serif;
-  color: black;
-  font-weight: 500;
-}
-.html:hover {
-  animation: rotateAnimation 1s infinite linear; /* Rotate the icon infinitely when hovered over */
+.card {
+  max-width: 100%; /* Base style */
+  margin: 0 auto;
 }
 
-.html:hover {
-  animation: rotateAnimation 1s infinite linear; /* Rotate the icon infinitely when hovered over */
-}
-
-.css:hover {
-  animation: rotateAnimation 1s infinite linear; /* Rotate the icon infinitely when hovered over */
-}
-
-.js:hover {
-  animation: rotateAnimation 1s infinite linear; /* Rotate the icon infinitely when hovered over */
-}
-
-.react:hover {
-  animation: rotateAnimation 1s infinite linear; /* Rotate the icon infinitely when hovered over */
-}
-
-.angular:hover {
-  animation: rotateAnimation 1s infinite linear; /* Rotate the icon infinitely when hovered over */
-}
-
-.node:hover {
-  animation: rotateAnimation 1s infinite linear; /* Rotate the icon infinitely when hovered over */
-}
-
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg); /* Start rotation from 0 degrees */
+@media (max-width: 768px) {
+  .card {
+    max-width: 50%; /* Adjust max-width for smaller screens */
   }
-  to {
-    transform: rotate(360deg); /* Rotate the icon by 360 degrees */
+}
+
+.contactForm {
+  background-color: #f8f9fa; /* Light background color for better readability */
+}
+
+.form-container {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    margin-top: 20px; /* Add some top margin for smaller screens */
   }
+}
+
+.form-label {
+  color: white; /* Make sure the label text is white */
+}
+
+.contactForm .btn-dark {
+  background-color: #343a40; /* Dark background color for the button */
+  border: none;
+}
+
+.contactForm .btn-dark:hover {
+  background-color: #23272b; /* Darker background color on hover */
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
