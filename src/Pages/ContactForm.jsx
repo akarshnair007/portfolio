@@ -41,7 +41,7 @@ const ContactForm = () => {
       </h1>
       <div className="container">
         <div className="row d-flex align-items-center justify-content-center">
-          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-center justify-content-center">
             <img
               src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXF6azd4MmNqbHcyd210aGVtanRyOWNyaTdtcmo0YmRiczhheGEzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nv6bOexvEyVV50U4Qz/giphy.gif"
               alt="Contact Gif"

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
@@ -26,14 +27,19 @@ const FirstPage = () => {
             repeat={Infinity}
           />
         </div>
-        <div className="col-lg-4 col-sm-12 mb-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="col-lg-4 col-sm-12 mb-4"
+        >
           <img
             src="/pic.jpg"
             className="img-fluid rounded-circle"
             alt="Akarsh Nair"
             style={{ height: "200px", width: "200px" }}
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
