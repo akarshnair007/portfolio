@@ -23,11 +23,11 @@ const Loader = ({ setIsLoading }) => {
         backgroundColor: "#0D0C1B",
       }}
     >
-      <h5 style={{ color: "white" }}>
+      <h6 style={{ color: "white" }}>
         {" "}
         <span className="color"> Akarsh Nair</span> Portfolio is Loading Please
         Wait:
-      </h5>
+      </h6>
       <h1>
         <l-grid size="60" speed="1.5" color="white"></l-grid>
       </h1>
