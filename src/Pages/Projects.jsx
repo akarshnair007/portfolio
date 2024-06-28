@@ -33,24 +33,26 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Bubble Game",
-      description: "Created Using HTML, CSS (Bootstrap Framework)",
-      image: "/resturant.png",
-      link: "https://legendary-biscuit-0ba6b6.netlify.app/",
+      title: "Netflix clone",
+      description: "Created Using HTML, TailwindCSS, JS , React & FireBase",
+      image: "/netflix.png",
+      link: "https://netflix-react-e6632.web.app",
     },
     {
       id: 5,
-      title: "Netflix clone",
-      description: "Created Using HTML, CSS (Bootstrap Framework)",
-      image: "/resturant.png",
-      link: "https://legendary-biscuit-0ba6b6.netlify.app/",
+      title: "Nike clone",
+      description:
+        "Created Using HTML, Bootstrap, JS And React and React Slick",
+      image: "/nike.png",
+      link: "https://nike-clone-react-zeta.vercel.app/",
     },
     {
       id: 6,
-      title: "Nike Clone",
-      description: "Created Using HTML, CSS (Bootstrap Framework)",
-      image: "/resturant.png",
-      link: "https://legendary-biscuit-0ba6b6.netlify.app/",
+      title: "Whisper Wall",
+      description:
+        "Created Using HTML, TailwindCSS, JS , React, React Redux And Json Server",
+      image: "/whisper.png",
+      link: "https://whisper-wall-frontend.vercel.app/",
     },
   ];
 
@@ -126,6 +128,7 @@ const Projects = () => {
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     className="img-fluid"
+                    height={"100%"}
                   />
                   <p>{selectedProject.description}</p>
                   <div className="d-flex align-items-center justify-content-center">

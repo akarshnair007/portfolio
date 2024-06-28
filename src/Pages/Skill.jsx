@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  faAngular,
   faCss3Alt,
   faHtml5,
   faJs,
   faNode,
   faReact,
+  faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -30,14 +30,15 @@ const Skill = () => {
       },
     },
   };
+  <FontAwesomeIcon icon={faBootstrap} />;
 
   const icons = [
     { icon: faHtml5, color: "orange", padding: "9px 15px 9px 15px" },
     { icon: faCss3Alt, color: "blue", padding: "9px 15px 9px 15px" },
     { icon: faJs, color: "yellow", padding: "9px 13px 9px 13px" },
     { icon: faReact, color: "lightblue", padding: "9px 10px 9px 10px" },
-    { icon: faAngular, color: "red", padding: "9px 15px 9px 15px" },
     { icon: faNode, color: "green", padding: "9px 5px 9px 5px" },
+    { icon: faBootstrap, color: "purple", padding: "9px 5px 9px 5px" },
   ];
 
   return (
@@ -52,7 +53,7 @@ const Skill = () => {
         initial="hidden"
       >
         {icons.map((iconObj, index) => (
-          <div key={index} className="col-lg-2 col-sm-4 col-6 pt-5">
+          <div key={index} className="col-lg-2 col-sm-3 col-5 pt-5">
             <motion.div variants={{ animate: waveAnimation }}>
               <FontAwesomeIcon
                 className="fa-3x"
