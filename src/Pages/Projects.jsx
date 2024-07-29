@@ -12,7 +12,7 @@ const Projects = () => {
       id: 1,
       title: "Weather App",
       description:
-        "Created Using HTML, CSS (Bootstrap Framework), JavaScript, and React",
+        "Created Using HTML, CSS (Bootstrap Framework), JavaScript(using OpenWeather API)",
       image: "/weather.png",
       link: "https://graceful-otter-cd03ed.netlify.app/",
     },
@@ -34,7 +34,8 @@ const Projects = () => {
     {
       id: 4,
       title: "Job Portal clone",
-      description: "It is Full Stack MERN project",
+      description:
+        "It is Full Stack MERN(MongoDB, Express.js, React, Node.js) project",
       image: "/job_portal.png",
       link: "https://netflix-react-e6632.web.app",
     },
@@ -132,12 +133,15 @@ const Projects = () => {
                   />
                   <p>{selectedProject.description}</p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <Button
-                      variant="info"
-                      href={selectedProject.link}
-                      className="text-white item-center text-center"
-                    >
-                      Go to Project
+                    <Button variant="info">
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        className="text-white"
+                        style={{ textDecoration: "none" }}
+                      >
+                        Go to Project
+                      </a>
                     </Button>
                   </div>
                 </Modal.Body>

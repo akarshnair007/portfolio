@@ -11,7 +11,7 @@ const Loader = ({ setIsLoading }) => {
     <motion.div
       initial={{ opacity: 1 }} // initially when page loads we will see page as opacity 1
       animate={{ opacity: 0 }} // after delay of 5 sec opacity will be zero
-      transition={{ duration: 1, delay: 5 }} // delay for 5 sec is used so that we can see page for 5 sec after that in duration of 1 sec aniamte will execute where opacity will be zero
+      transition={{ duration: 1, delay: 3 }} // delay for 5 sec is used so that we can see page for 5 sec after that in duration of 1 sec aniamte will execute where opacity will be zero
       onAnimationComplete={() => setIsLoading(false)} // Call setIsLoading(false) after animation is complete
       style={{
         height: "100vh",
