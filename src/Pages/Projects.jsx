@@ -33,9 +33,9 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Netflix clone",
-      description: "Created Using HTML, TailwindCSS, JS , React & FireBase",
-      image: "/netflix.png",
+      title: "Job Portal clone",
+      description: "It is Full Stack MERN project",
+      image: "/job_portal.png",
       link: "https://netflix-react-e6632.web.app",
     },
     {
